@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<title>东软智慧重置版v6</title>
+<icon>icon.png</icon>
+<packageName>com.nsuedu.apk2</packageName>
+<versionName>东软智慧 重制版v1.0</versionName>
+<versionint>1</versionint>
+<sdk>15</sdk>
+<yuv>7</yuv>
+<iConfusionRule>0</iConfusionRule>
+<V6AddV5>0</V6AddV5>
+
+<remark></remark>
+<Permissions>android.permission.REQUEST_INSTALL_PACKAGES
+android.permission.INTERNET</Permissions>
+<createTime>2024-11-06 10:49:41</createTime>
+<upTime>2024-11-06 10:49:41</upTime>

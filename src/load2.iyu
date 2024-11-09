@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><xxbj id="load_v" width="-1" height="-1" orientation="vertical" backgroundColor="#ff8bff95" gravity="center">
+<wb id="wb1" width="-2" height="-2" text="正在签到..." textSize="50dp"/><_Yu5Src><on_loadingComplete><on_loadingComplete>uycl("#ff8bff95",true)
+
+t(){
+  s url = "http://sep.study.neuedu.com/se-tool-gateway/biz/attendance/studentAttendanceBiz/save"
+  s postList = "{\"access_token\": \""+ interact.token +"\",\"termId\": \""+ interact.termId +"\",\"attendanceType\": \""+ interact.calendarType +"\",\"instanceId\": \""+ interact.instanceId +"\",\"attendanceCode\": \""+ interact.attendanceCode +"\",\"collegeId\": \"2263\"}"
+  s header = "token="+ interact.token +"||Content-Type=application/json; charset=utf-8"
+  s getHttp = hs(url,postList , "utf-8", null , true , header)
+  syso(getHttp)
+  rg getHttp != "null"
+  {
+    interact.returnMsg = "签到成功"
+  },{
+    interact.returnMsg = "交互失败"
+  }
+  end()
+}</on_loadingComplete></on_loadingComplete><on_resume><on_resume/></on_resume></_Yu5Src></xxbj>

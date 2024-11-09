@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><xxbj id="mian_v" width="-1" height="-1" orientation="vertical" gravity="center" backgroundColor="#ff8bff95">
+
+
+<xxbj id="xxbj1" width="300dp" height="70dp" orientation="horizontal" gravity="center_vertical" layout_marginTop="0dp"><wb id="wb1" width="-2" height="-1" text="学号" visibility="visible" textSize="40dp" typeface="serif"><Yu5Src><setOnClickListener><onClick>uigo("cmd.iyu")</onClick></setOnClickListener></Yu5Src></wb><wbsrbj id="wbsrbj1" width="-1" height="-1" ct_vertical_bias="1" gravity="top" backgroundRipple="#ff04b710" layout_marginTop="0dp" orientation="vertical" app_counterEnabled="true"><bjk id="8001" width="-1" height="40dp" text="" hint="2401602****" textColor="#ff434642" singleLine="true" inputType="number"/></wbsrbj></xxbj><xxbj id="xxbj4" width="300dp" height="70dp" orientation="horizontal" gravity="center_vertical" layout_marginTop="60dp"><wb id="passwordWb" width="-2" height="-1" text="密码" visibility="visible" textSize="40dp" typeface="serif"/><wbsrbj id="wbsrbj3" width="-1" height="-1" ct_vertical_bias="1" gravity="top" backgroundRipple="#ff04b710" layout_marginTop="0dp" orientation="vertical" app_counterEnabled="true"><bjk id="password" width="-1" height="40dp" text="" hint="******************" textColor="#ff434642" singleLine="true" textSize="14dp" inputType="textPassword"/></wbsrbj></xxbj><xxbj id="xxbj6" width="300dp" height="60dp" orientation="horizontal" gravity="right" layout_marginTop="10dp"><an id="highMode" width="-2" height="-1" text="高级模式" typeface="sans" backgroundRipple="#ffbbecbf"><Yu5Src><setOnClickListener><onClick>
+
+rg all.highMode == fou
+{
+  all.highMode = shi
+  highMode.text("隐藏")
+  keyBj.visibility("visible")
+  tokenBj.visibility("visible")
+},{
+  all.highMode = fou
+  highMode.text("高级模式")
+  keyBj.visibility("gone")
+  tokenBj.visibility("gone")
+}</onClick></setOnClickListener></Yu5Src></an></xxbj><xxbj id="keyBj" width="300dp" height="70dp" orientation="horizontal" gravity="center_vertical" layout_marginTop="10dp" visibility="gone"><wb id="wb2" width="-2" height="-1" text="密文" visibility="visible" textSize="40dp" typeface="serif"/><wbsrbj id="wbsrbj2" width="-1" height="-1" ct_vertical_bias="1" gravity="top" backgroundRipple="#ff00d1dc" layout_marginTop="0dp" orientation="vertical" app_counterEnabled="true"><bjk id="8002" width="-1" height="40dp" text="" hint="19N******************==" textColor="#ff434642" singleLine="true" textSize="14dp" inputType="text"/></wbsrbj></xxbj><xxbj id="tokenBj" width="300dp" height="70dp" orientation="horizontal" gravity="center_vertical" layout_marginTop="60dp" visibility="gone"><wb id="wb3" width="-2" height="-1" text="Token" visibility="visible" textSize="30dp" typeface="serif"><Yu5Src><setOnClickListener><onClick>bjk_8003.text("")</onClick></setOnClickListener></Yu5Src></wb><wbsrbj id="wbsrbj4" width="-1" height="-1" ct_vertical_bias="1" gravity="top" backgroundRipple="#ff00d1dc" layout_marginTop="0dp" orientation="vertical" app_counterEnabled="true"><bjk id="8003" width="-1" height="40dp" text="" hint="abc123-****-****-****-****-*******" textColor="#ff434642" singleLine="true" textSize="10dp" inputType="text"/></wbsrbj></xxbj><xxbj id="xxbj3" width="300dp" height="70dp" orientation="horizontal" gravity="center_vertical" layout_marginTop="40dp"><an id="get" width="-1" height="-2" text="登入" typeface="sans" backgroundRipple="#ffbbecbf"><Yu5Src><setOnClickListener><onClick>//qj s postList = cj.string[3]
+
+//postList[0] = inputId.text()
+//postList[1] = inputKey.text()
+//postList[2] = "2263"
+
+/*
+s fileText = json("{}")
+json(fileText,"set","user",bjk_8001.text())
+json(fileText,"set","key",bjk_8002.text())
+fw("$loginKey.json",fileText,"utf-8")
+*/
+all.inputKey = bjk_8002.text()
+
+
+t(){
+  s url = ""
+  s postList = ""
+  s header = ""
+  s getHttp = ""
+  s getHttpJson = json("{}")
+  rg all.highMode == fou
+  {
+    url = "http://oneman.site/subPage/Gesture/key.php?key=757da2be61249c18&amp;text="+password.text()
+    getHttp = hs(url)
+    //syso(getHttp)
+    //bjk_8002.text(getHttp)
+    all.inputKey = getHttp
+  }
+  
+  s inputId = st.bjk(8001)
+  s inputKey = st.bjk(8002)
+  s inputToken = st.bjk(8003)
+  
+  rg bjk_8003.text() == "" || all.highMode == fou
+  {
+    
+    url = "http://sep.study.neuedu.com/se-tool-gateway/data/user/systemUser/userLoginPost"
+    postList = "{\"loginCode\":\""+inputId.text()+"\",\"p\":\""+all.inputKey+"\",\"collegeId\":2263}"
+    header = "Content-Type=application/json; charset=utf-8"
+    getHttp = hs(url,postList , "utf-8", null , true , header)
+    //syso(getHttp)
+    getHttpJson = json(getHttp)
+    all.Information = getHttp
+    all.Token = json(getHttpJson, "get", "accessToken")
+    //inputToken.text(all.Token)
+    //syso(all.Token)
+  },{
+    all.Token = bjk_8003.text()
+  }
+  url = "http://sep.study.neuedu.com/se-tool-gateway/biz/course/course_biz/stuGetCourseList"
+  postList = "{\"access_token\":\""+all.Token+"\",\"termType\":0,\"collegeId\":2263}"
+  header = "token="+all.Token+"||Content-Type=application/json; charset=utf-8"
+  //syso(postList)
+  getHttp = hs(url,postList , "utf-8", null , true , header)
+  all.ClassInf = getHttp
+  //syso(getHttp)
+  s fileText = json("{}")
+  json(fileText,"set","user",bjk_8001.text())
+  json(fileText,"set","key",all.inputKey)
+  json(fileText,"set","password",password.text())
+  json(fileText,"set","token",all.Token)
+  rg all.highMode == shi
+  {
+    json(fileText,"set","highMode","1")
+  },{
+    json(fileText,"set","highMode","0")
+  }
+  fw("$loginKey.json",fileText,"utf-8")
+  
+  uigo("cmd.iyu")
+  rg all.Token != "null"
+  {
+    
+  },{
+    
+    //inputKey.text("错误")
+  }
+  
+  
+}</onClick></setOnClickListener></Yu5Src></an></xxbj><_Yu5Src><on_loadingComplete><on_loadingComplete>boolean fileHave = fe("$loginKey.json")
+
+rg fileHave
+{
+  s file = fr("$loginKey.json","utf-8")
+  syso(file)
+  s jsonFile = json(file)
+  bjk_8001.text(json(jsonFile,"get","user"))
+  password.text(json(jsonFile,"get","password"))
+  bjk_8002.text(json(jsonFile,"get","key"))
+  bjk_8003.text(json(jsonFile,"get","token"))
+  rg json(jsonFile,"get","highMode") == "1"
+  {
+    all.highMode = shi
+    highMode.text("隐藏")
+    keyBj.visibility("visible")
+    tokenBj.visibility("visible")
+  }
+}
+
+uycl("#ff8bff95", true)</on_loadingComplete></on_loadingComplete></_Yu5Src></xxbj>

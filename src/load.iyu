@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><xxbj id="load_v" width="-1" height="-1" orientation="vertical" backgroundColor="#ff8bff95" gravity="center">
+<wb id="wb1" width="-2" height="-2" text="正在加载..." textSize="50dp"/><_Yu5Src><on_loadingComplete><on_loadingComplete>uycl("#ff8bff95",true)
+
+rg interact.Loading == 0
+{
+  end()
+}
+
+t(){
+  s url = "http://sep.study.neuedu.com/se-tool-gateway/biz/attendance/studentMobileInteract/getMobileInteractList"
+  s postList = "{\"access_token\": \""+ interact.token +"\",\"termId\": \""+ interact.termId +"\",\"teachingArrangementId\": \""+ interact.teachingArrangementId +"\",\"collegeId\": \"2263\"}"
+  s header = "token="+ interact.token +"||Content-Type=application/json; charset=utf-8"
+  s getHttp = hs(url,postList , "utf-8", null , true , header)
+  
+  
+  s getHttpJson = json(getHttp)
+  s jsonInf = json(json(getHttpJson,"get","data"),"data",0)
+  interact.Inf = jsonInf
+  
+  rg jsonInf != "null"
+  {
+    s jsonCalendar = json(json(jsonInf,"get","businessList"),"data",0)
+    interact.calInf = jsonCalendar
+    //syso(jsonCalendar)
+    s calendarType = json(jsonCalendar,"get","attendanceType")
+    s calendarName = json(jsonInf,"get","calendarName")
+    s attendanceCode = json(jsonCalendar,"get","attendanceCode")
+    s createTime = json(jsonCalendar,"get","createTime")
+    s businessId = json(jsonCalendar,"get","businessId")
+    interact.calendarType = calendarType
+    interact.calendarName = calendarName
+    interact.attendanceCode = attendanceCode
+    interact.createTime = createTime
+    interact.instanceId = businessId
+  }
+  
+  interact.Loading = 0
+  uigo("set.iyu")
+}
+</on_loadingComplete></on_loadingComplete><on_resume><on_resume/></on_resume><on_pause><on_pause/></on_pause><on_restart><on_restart>rg interact.Loading == 0
+{
+  end()
+},{
+  t(){
+    s url = "http://sep.study.neuedu.com/se-tool-gateway/biz/attendance/studentMobileInteract/getMobileInteractList"
+    s postList = "{\"access_token\": \""+ interact.token +"\",\"termId\": \""+ interact.termId +"\",\"teachingArrangementId\": \""+ interact.teachingArrangementId +"\",\"collegeId\": \"2263\"}"
+    s header = "token="+ interact.token +"||Content-Type=application/json; charset=utf-8"
+    s getHttp = hs(url,postList , "utf-8", null , true , header)
+    
+    
+    s getHttpJson = json(getHttp)
+    s jsonInf = json(json(getHttpJson,"get","data"),"data",0)
+    interact.Inf = jsonInf
+    
+    rg jsonInf != "null"
+    {
+      s jsonCalendar = json(json(jsonInf,"get","businessList"),"data",0)
+      interact.calInf = jsonCalendar
+      //syso(jsonCalendar)
+      s calendarType = json(jsonCalendar,"get","attendanceType")
+      s calendarName = json(jsonInf,"get","calendarName")
+      s attendanceCode = json(jsonCalendar,"get","attendanceCode")
+      s createTime = json(jsonCalendar,"get","createTime")
+      s businessId = json(jsonCalendar,"get","businessId")
+      interact.calendarType = calendarType
+      interact.calendarName = calendarName
+      interact.attendanceCode = attendanceCode
+      interact.createTime = createTime
+      interact.instanceId = businessId
+    }
+    
+    interact.Loading = 0
+    uigo("set.iyu")
+  }
+}</on_restart></on_restart></_Yu5Src></xxbj>

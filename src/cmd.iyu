@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?><xxbj id="information_v" width="-1" height="-1" orientation="vertical" gravity="center_horizontal" backgroundColor="#ffcbdecd">
+<xxbj id="xxbj1" width="-1" height="50dp" orientation="vertical" backgroundColor="#ff56e16b"><wb id="8001" width="-1" height="-1" text="欢迎" textSize="30dp" typeface="serif" paddingLeft="30dp" gravity="center_vertical"/></xxbj><xxbj id="xxbj2" width="330dp" height="650dp" orientation="vertical"><gd id="gd1" width="-1" height="650dp"><xxbj id="xxbj4" width="-1" height="-2" orientation="vertical"><xdbj id="xdbj1" width="-1" height="100dp" layout_marginTop="2dp" clipChildren="false" backgroundColor="#ff9ddca6" backgroundRipple="#ff057b11"><wb id="classText1" width="230dp" height="80dp" text="程序设计基础（C语言）" layout_marginLeft="10dp" layout_marginTop="10dp" textSize="20dp"/><an id="classAn1" width="-2" height="-2" text="操作" layout_marginLeft="250dp" layout_marginTop="5dp"><Yu5Src><setOnClickListener><onClick>s jsonCla = json(json(json(json(all.ClassInf),"get","data"),"data",0),"get","courseList")
+s classNum = 0
+s className = ""
+
+classNum = all.PageNum*8-8+ 0
+rg classNum &lt; all.ClassLen
+{
+  
+  interact.termId = json(json(jsonCla,"data",classNum),"get","termId")
+  interact.teachingArrangementId = json(json(jsonCla,"data",classNum),"get","teachingArrangementId")
+  interact.token = all.Token
+  
+  interact.Loading = 1
+  uigo("load.iyu")
+}</onClick></setOnClickListener></Yu5Src></an></xdbj><xdbj id="xdbj2" width="-1" height="100dp" layout_marginTop="2dp" clipChildren="false" backgroundColor="#ff9ddca6" backgroundRipple="#ff057b11"><wb id="classText2" width="230dp" height="80dp" text="程序设计基础（C语言）" layout_marginLeft="10dp" layout_marginTop="10dp" textSize="20dp"/><an id="classAn2" width="-2" height="-2" text="操作" layout_marginLeft="250dp" layout_marginTop="5dp"><Yu5Src><setOnClickListener><onClick>s jsonCla = json(json(json(json(all.ClassInf),"get","data"),"data",0),"get","courseList")
+s classNum = 0
+s className = ""
+
+classNum = all.PageNum*8-8+ 1
+rg classNum &lt; all.ClassLen
+{
+  
+  interact.termId = json(json(jsonCla,"data",classNum),"get","termId")
+  interact.teachingArrangementId = json(json(jsonCla,"data",classNum),"get","teachingArrangementId")
+  interact.token = all.Token
+  
+  interact.Loading = 1
+  uigo("load.iyu")
+}</onClick></setOnClickListener></Yu5Src></an></xdbj><xdbj id="xdbj3" width="-1" height="100dp" layout_marginTop="2dp" clipChildren="false" backgroundColor="#ff9ddca6" backgroundRipple="#ff057b11"><wb id="classText3" width="230dp" height="80dp" text="程序设计基础（C语言）" layout_marginLeft="10dp" layout_marginTop="10dp" textSize="20dp"/><an id="classAn3" width="-2" height="-2" text="操作" layout_marginLeft="250dp" layout_marginTop="5dp"><Yu5Src><setOnClickListener><onClick>s jsonCla = json(json(json(json(all.ClassInf),"get","data"),"data",0),"get","courseList")
+s classNum = 0
+s className = ""
+
+classNum = all.PageNum*8-8+ 2
+rg classNum &lt; all.ClassLen
+{
+  
+  interact.termId = json(json(jsonCla,"data",classNum),"get","termId")
+  interact.teachingArrangementId = json(json(jsonCla,"data",classNum),"get","teachingArrangementId")
+  interact.token = all.Token
+  
+  interact.Loading = 1
+  uigo("load.iyu")
+}</onClick></setOnClickListener></Yu5Src></an></xdbj><xdbj id="xdbj4" width="-1" height="100dp" layout_marginTop="2dp" clipChildren="false" backgroundColor="#ff9ddca6" backgroundRipple="#ff057b11"><wb id="classText4" width="230dp" height="80dp" text="程序设计基础（C语言）" layout_marginLeft="10dp" layout_marginTop="10dp" textSize="20dp"/><an id="classAn4" width="-2" height="-2" text="操作" layout_marginLeft="250dp" layout_marginTop="5dp"><Yu5Src><setOnClickListener><onClick>s jsonCla = json(json(json(json(all.ClassInf),"get","data"),"data",0),"get","courseList")
+s classNum = 0
+s className = ""
+
+classNum = all.PageNum*8-8+ 3
+rg classNum &lt; all.ClassLen
+{
+  
+  interact.termId = json(json(jsonCla,"data",classNum),"get","termId")
+  interact.teachingArrangementId = json(json(jsonCla,"data",classNum),"get","teachingArrangementId")
+  interact.token = all.Token
+  
+  interact.Loading = 1
+  uigo("load.iyu")
+}</onClick></setOnClickListener></Yu5Src></an></xdbj><xdbj id="xdbj5" width="-1" height="100dp" layout_marginTop="2dp" clipChildren="false" backgroundColor="#ff9ddca6" backgroundRipple="#ff057b11"><wb id="classText5" width="230dp" height="80dp" text="程序设计基础（C语言）" layout_marginLeft="10dp" layout_marginTop="10dp" textSize="20dp"/><an id="classAn5" width="-2" height="-2" text="操作" layout_marginLeft="250dp" layout_marginTop="5dp"><Yu5Src><setOnClickListener><onClick>s jsonCla = json(json(json(json(all.ClassInf),"get","data"),"data",0),"get","courseList")
+s classNum = 0
+s className = ""
+
+classNum = all.PageNum*8-8+ 4
+rg classNum &lt; all.ClassLen
+{
+  
+  interact.termId = json(json(jsonCla,"data",classNum),"get","termId")
+  interact.teachingArrangementId = json(json(jsonCla,"data",classNum),"get","teachingArrangementId")
+  interact.token = all.Token
+  
+  interact.Loading = 1
+  uigo("load.iyu")
+}</onClick></setOnClickListener></Yu5Src></an></xdbj><xdbj id="xdbj6" width="-1" height="100dp" layout_marginTop="2dp" clipChildren="false" backgroundColor="#ff9ddca6" backgroundRipple="#ff057b11"><wb id="classText6" width="230dp" height="80dp" text="程序设计基础（C语言）" layout_marginLeft="10dp" layout_marginTop="10dp" textSize="20dp"/><an id="classAn6" width="-2" height="-2" text="操作" layout_marginLeft="250dp" layout_marginTop="5dp"><Yu5Src><setOnClickListener><onClick>s jsonCla = json(json(json(json(all.ClassInf),"get","data"),"data",0),"get","courseList")
+s classNum = 0
+s className = ""
+
+classNum = all.PageNum*8-8+ 5
+rg classNum &lt; all.ClassLen
+{
+  
+  interact.termId = json(json(jsonCla,"data",classNum),"get","termId")
+  interact.teachingArrangementId = json(json(jsonCla,"data",classNum),"get","teachingArrangementId")
+  interact.token = all.Token
+  
+  interact.Loading = 1
+  uigo("load.iyu")
+}</onClick></setOnClickListener></Yu5Src></an></xdbj><xdbj id="xdbj7" width="-1" height="100dp" layout_marginTop="2dp" clipChildren="false" backgroundColor="#ff9ddca6" backgroundRipple="#ff057b11"><wb id="classText7" width="230dp" height="80dp" text="程序设计基础（C语言）" layout_marginLeft="10dp" layout_marginTop="10dp" textSize="20dp"/><an id="classAn7" width="-2" height="-2" text="操作" layout_marginLeft="250dp" layout_marginTop="5dp"><Yu5Src><setOnClickListener><onClick>s jsonCla = json(json(json(json(all.ClassInf),"get","data"),"data",0),"get","courseList")
+s classNum = 0
+s className = ""
+
+classNum = all.PageNum*8-8+ 6
+rg classNum &lt; all.ClassLen
+{
+  
+  interact.termId = json(json(jsonCla,"data",classNum),"get","termId")
+  interact.teachingArrangementId = json(json(jsonCla,"data",classNum),"get","teachingArrangementId")
+  interact.token = all.Token
+  
+  interact.Loading = 1
+  uigo("load.iyu")
+}</onClick></setOnClickListener></Yu5Src></an></xdbj><xdbj id="xdbj8" width="-1" height="100dp" layout_marginTop="2dp" clipChildren="false" backgroundColor="#ff9ddca6" backgroundRipple="#ff057b11"><wb id="classText8" width="230dp" height="80dp" text="程序设计基础（C语言）" layout_marginLeft="10dp" layout_marginTop="10dp" textSize="20dp"/><an id="classAn8" width="-2" height="-2" text="操作" layout_marginLeft="250dp" layout_marginTop="5dp"><Yu5Src><setOnClickListener><onClick>s jsonCla = json(json(json(json(all.ClassInf),"get","data"),"data",0),"get","courseList")
+s classNum = 0
+s className = ""
+
+classNum = all.PageNum*8-8+ 7
+rg classNum &lt; all.ClassLen
+{
+  
+  interact.termId = json(json(jsonCla,"data",classNum),"get","termId")
+  interact.teachingArrangementId = json(json(jsonCla,"data",classNum),"get","teachingArrangementId")
+  interact.token = all.Token
+  
+  interact.Loading = 1
+  uigo("load.iyu")
+}</onClick></setOnClickListener></Yu5Src></an></xdbj></xxbj></gd></xxbj><_Yu5Src><on_loading><on_loading>
+
+</on_loading></on_loading><on_loadingComplete><on_loadingComplete>s jsonInf = json(all.Information)
+s jsonClaAll = json(all.ClassInf)
+s relName = json(jsonInf,"get","realName")
+rg relName != "null"
+{
+  wb_8001.text("欢迎 "+relName)
+},{
+  wb_8001.text("欢迎同学")
+}
+
+uycl("#ff56e16b",true)
+
+s jsonCla = json(json(json(jsonClaAll,"get","data"),"data",0),"get","courseList")
+s len = zint(json(jsonCla,"size"))
+all.ClassLen = len
+all.PageTop = len / 8
+//syso(len)
+rg all.PageTop*8 != len
+{
+  all.PageTop++
+}
+//syso(all.PageTop)
+
+s classNum = 0
+s className = ""
+
+classNum = all.PageNum*8-8+ 0
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText1.text(className)
+
+classNum = all.PageNum*8-8+ 1
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText2.text(className)
+
+classNum = all.PageNum*8-8+ 2
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText3.text(className)
+
+classNum = all.PageNum*8-8+ 3
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText4.text(className)
+
+classNum = all.PageNum*8-8+ 4
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText5.text(className)
+
+classNum = all.PageNum*8-8+ 5
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText6.text(className)
+
+classNum = all.PageNum*8-8+ 6
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText7.text(className)
+
+classNum = all.PageNum*8-8+ 7
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText8.text(className)</on_loadingComplete></on_loadingComplete></_Yu5Src><xxbj id="xxbj3" width="-1" height="-1" orientation="horizontal" gravity="center"><an id="an1" width="-2" height="-2" text="上一页" backgroundRipple="#ff057b11"><Yu5Src><setOnClickListener><onClick>rg all.PageNum &gt; 1
+{
+  all.PageNum--
+}
+
+
+
+s jsonCla = json(json(json(json(all.ClassInf),"get","data"),"data",0),"get","courseList")
+s classNum = 0
+s className = ""
+
+classNum = all.PageNum*8-8+ 0
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText1.text(className)
+
+classNum = all.PageNum*8-8+ 1
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText2.text(className)
+
+classNum = all.PageNum*8-8+ 2
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText3.text(className)
+
+classNum = all.PageNum*8-8+ 3
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText4.text(className)
+
+classNum = all.PageNum*8-8+ 4
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText5.text(className)
+
+classNum = all.PageNum*8-8+ 5
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText6.text(className)
+
+classNum = all.PageNum*8-8+ 6
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText7.text(className)
+
+classNum = all.PageNum*8-8+ 7
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText8.text(className)</onClick></setOnClickListener></Yu5Src></an><an id="an2" width="-2" height="-2" text="下一页" backgroundRipple="#ff057b11"><Yu5Src><setOnClickListener><onClick>rg all.PageNum &lt; all.PageTop
+{
+  all.PageNum++
+}
+
+
+
+s jsonCla = json(json(json(json(all.ClassInf),"get","data"),"data",0),"get","courseList")
+s classNum = 0
+s className = ""
+
+classNum = all.PageNum*8-8+ 0
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText1.text(className)
+
+classNum = all.PageNum*8-8+ 1
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText2.text(className)
+
+classNum = all.PageNum*8-8+ 2
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText3.text(className)
+
+classNum = all.PageNum*8-8+ 3
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText4.text(className)
+
+classNum = all.PageNum*8-8+ 4
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText5.text(className)
+
+classNum = all.PageNum*8-8+ 5
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText6.text(className)
+
+classNum = all.PageNum*8-8+ 6
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText7.text(className)
+
+classNum = all.PageNum*8-8+ 7
+rg classNum &lt; all.ClassLen
+{
+  className = json(json(jsonCla,"data",classNum),"get","courseName")
+},{
+  className = "敬请期待"
+}
+classText8.text(className)</onClick></setOnClickListener></Yu5Src></an></xxbj></xxbj>

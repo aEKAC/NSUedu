@@ -1,0 +1,16 @@
+qj s termId = "null"
+qj s teachingArrangementId = "null"
+qj s token = "null"
+
+qj s Inf = "null"
+qj s calInf = "null"
+
+qj s calendarType = "null"
+qj s calendarName = "null"
+qj s attendanceCode = "null"
+qj s createTime = "null"
+qj s instanceId = "null"
+
+
+qj s Loading = 0
+qj s returnMsg = "点击交互请求"

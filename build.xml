@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><iapp>
+<classExtends><itme name="/src/interact.myu"/></classExtends>
+<pathRemarks><itme name="/src/all.myu">全局变量</itme><itme name="/src/interact.myu">交互请求变量</itme></pathRemarks>
+<importClass><itme name="/src/all.myu"/><itme name="/src/cmd.iyu"/><itme name="/src/load2.iyu"/></importClass>
+<newControl/>
+<codeEvent/>
+<dexClass/>
+<codeComment/>
+</iapp>

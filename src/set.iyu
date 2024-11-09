@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><xxbj id="set_v" width="-1" height="-1" orientation="vertical" backgroundColor="#ffc4ffc0">
+<xxbj id="xxbj1" width="-1" height="50dp" orientation="vertical" backgroundColor="#ff56e16b" gravity="center_vertical"><wb id="wb1" width="-2" height="-2" text="课程互动" textSize="30dp" layout_marginLeft="20dp" typeface="sans"/></xxbj><xxbj id="xxbj3" width="-1" height="200dp" orientation="vertical" layout_marginTop="10dp" layout_marginLeft="10dp" layout_marginRight="10dp" backgroundColor="#ff99ff94"><xdbj id="xdbj1" width="-1" height="-1"><wb id="8001" width="-2" height="-2" text="手势签到" textSize="45dp" layout_marginLeft="10dp" layout_marginTop="6dp" typeface="serif"/><wb id="8002" width="300dp" height="20dp" text="Mini project 2 - A child’s clutter awaits an adult’s return" layout_marginLeft="20dp" layout_marginTop="68dp" singleLine="true"/><wb id="8003" width="300dp" height="-2" text="密码：" layout_marginLeft="20dp" layout_marginTop="93dp" singleLine="false" typeface="monospace"/><wb id="8004" width="150dp" height="20dp" text="2024-11-7 00:49:00" layout_marginLeft="180dp" layout_marginTop="176dp" textColor="#ffa3a3a3" typeface="monospace"/></xdbj></xxbj><xxbj id="xxbj2" width="-1" height="-1" orientation="vertical" layout_marginTop="5dp" paddingLeft="30dp" paddingRight="30dp" gravity="center_horizontal"><an id="an1" width="-1" height="80dp" text="刷新" backgroundRipple="#ff057b11" textSize="30dp" typeface="serif" visibility="visible"><Yu5Src><setOnClickListener><onClick>interact.Loading = 1
+end()</onClick></setOnClickListener></Yu5Src></an><an id="qdAn" width="-1" height="80dp" text="一键签到" backgroundRipple="#ff057b11" textSize="30dp" typeface="serif" visibility="visible"><Yu5Src><setOnClickListener><onClick>uigo("load2.iyu")</onClick></setOnClickListener></Yu5Src></an><wb id="msg" width="-2" height="-2" text="点击发起请求"/><llq id="keyShow" width="-1" height="-1" layout_marginTop="10dp" layout_marginBottom="10dp" url="http://oneman.site/subPage/Gesture/get.php?key="/></xxbj><_Yu5Src><on_loadingComplete><on_loadingComplete>//syso(interact.teachingArrangementId)
+uycl("#ff56e16b",true)
+//wb_8001.text("暂无日程")
+
+s outputType = st.wb(8001)
+s outputTitle = st.wb(8002)
+s outputKey = st.wb(8003)
+s outputTime = st.wb(8004)
+
+rg interact.calInf != "null"
+{
+  rg interact.calendarType == "1"
+  {
+    outputType.text("手势签到")
+    keyShow.url("http://oneman.site/subPage/Gesture/get.php?key="+interact.attendanceCode)
+  },{
+    outputType.text("扫码签到")
+    keyShow.url("https://api.pwmqr.com/qrcode/create/?url="+interact.attendanceCode)
+  }
+  outputTitle.text(interact.calendarName)
+  outputKey.text("操作密码："+interact.attendanceCode)
+  outputTime.text(interact.createTime)
+  qdAn.visibility("visible")
+  keyShow.visibility("visible")
+  msg.visibility("visible")
+},{
+  outputType.text("暂无日程")
+  outputTitle.text("没有签到啦(σ≧︎▽︎≦︎)σ。")
+  outputKey.text("null")
+  qdAn.visibility("invisible")
+  keyShow.visibility("invisible")
+  msg.visibility("invisible")
+}
+msg.text(interact.returnMsg)
+
+
+/*
+t(){
+s url = "http://sep.study.neuedu.com/se-tool-gateway/biz/attendance/studentMobileInteract/getMobileInteractList"
+s postList = "{\"access_token\": \""+ interact.token +"\",\"termId\": \""+ interact.termId +"\",\"teachingArrangementId\": \""+ interact.teachingArrangementId +"\",\"collegeId\": \"2263\"}"
+s header = "token="+ interact.token +"||Content-Type=application/json; charset=utf-8"
+s getHttp = hs(url,postList , "utf-8", null , true , header)
+//syso(getHttp)
+//syso("b")
+//stop(1000)
+s getHttpJson = json(getHttp)
+s jsonInf = json(json(getHttpJson,"get","data"),"data",0)
+//syso(jsonInf)
+
+s outputType = st.wb(8001)
+s outputTitle = st.wb(8002)
+s outputKey = st.wb(8003)
+s outputTime = st.wb(8004)
+
+rg jsonInf != "null"
+{
+s jsonCalendar = json(json(jsonInf,"get","businessList"),"data",0)
+//syso(jsonCalendar)
+s calendarType = json(jsonCalendar,"get","attendanceType")
+s calendarName = json(jsonCalendar,"get","calendarName")
+s attendanceCode = json(jsonCalendar,"get","attendanceCode")
+s createTime = json(jsonCalendar,"get","createTime")
+
+rg calendarType == 1
+{
+//outputType.text("手势签到")
+//typeText.text("手势签到")
+},{
+//outputType.text("扫码签到")
+//typeText.text("扫码签到")
+}
+//titleText.text(calendarName)
+//keyText.text(attendanceCode)
+//timeText.text(createTime)
+},{
+//outputType.text("暂无日程")
+//typeText.text("暂无日程")
+//titleText.text("没有签到啦(σ≧︎▽︎≦︎)σ。")
+//keyText.text("null")
+
+}
+
+
+}*/
+
+
+
+}</on_loadingComplete></on_loadingComplete><on_resume><on_resume>
+
+msg.text(interact.returnMsg)</on_resume></on_resume></_Yu5Src></xxbj>
