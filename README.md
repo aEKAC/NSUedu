@@ -1,10 +1,26 @@
 # NSUedu
 成都东软学院||东软智慧教学重制版：快捷手势、扫码签到
 
+# 使用方法
+下载apk程序
+1. 登录账号(本项目不会记录个人信息)
+2. 选择科目
+3. 一键签到
 
 # 演示
-![IMG_20241109_140642](https://github.com/user-attachments/assets/cd7e0b85-768b-47cc-9f7b-147a2686d603)
-![IMG_20241109_140705](https://github.com/user-attachments/assets/5f8d2df2-d30f-427d-9aec-55f75a78570e)
-![IMG_20241109_141115](https://github.com/user-attachments/assets/be685698-8c60-4333-a546-5c8d71f73c17)
-![IMG_20241109_140754](https://github.com/user-attachments/assets/17271a04-2706-4e48-810d-a3fcc157dc67)
-![IMG_20241109_140813](https://github.com/user-attachments/assets/4a4903b4-28aa-4615-aad6-e8dedb28aa5f)
+![IMG_20241111_214103](https://github.com/user-attachments/assets/8619ba99-16f3-44de-bf78-792e5147cf35)
+
+# 信息
+本项目使用 `iapp` 开发
+
+(登录选项)高级模式：
+- 有token直接使用token登录 *(速度最快)*
+- 没有token使用学号+密文登录
+- 普通模式下使用学号+密码生成密文登录 *(速度最慢)*
+
+## 密文是如何生成的(分析了半天)
+1. aes ecb padding 128位加密(密钥：757da2be61249c18)
+2. base64编码
+3. 得到密文
+
+*made by 24级新生*
